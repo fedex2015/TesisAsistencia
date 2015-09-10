@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!--    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         -->
-    <title>Sistemas de Gestion de Seguros</title>
+    <title>Sistemas de Gestion de Seguros2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
