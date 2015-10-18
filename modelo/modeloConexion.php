@@ -2,7 +2,7 @@
 //funcion para conectarnos a la base de datos
 function conectar_db()
 {
-	$id=mysqli_connect('mysql.hostinger.es','u723009264_admin','m3r3b42015','u723009264_tesis');
+	$id=mysqli_connect('us-cdbr-iron-east-03.cleardb.net','b950b27eb27af9','dce8e130','heroku_8636d613bba5fb8');
 	if (mysqli_connect_errno ($id))
    {
    echo "No se pudo conectar a MySQL: " . mysqli_connect_error ();}
