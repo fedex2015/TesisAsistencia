@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="styles/index.css">
+      <div class="panel-body">
+        <h3> Materia: {{listado.materia}}</h3>
+        <table class="table table-striped table-bordered" ng-show="listado.dataI == 200">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Falta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="{{ listado.nombreAlumno }}" ng-repeat="listado in listado | orderBy:'nombreAlumno'">
+              <th style="vertical-align:middle">{{listado.nombre}}</th>
+              <th style="vertical-align:middle">{{listado.apellido}}</th>
+			        <input type="hidden" id="{{listado.id_alumno}}"/>
+              <th style="vertical-align:middle">
+                <select id="view" class="form-control ng-pristine ng-valid ng-touched" ng-model="listado.view">
+                                <option ng-if="listado.Cod_asist == null" disabled="disabled" value="">Sel</option>
+                                <option ng-if="listado.Cod_asist != null" disabled="disabled" value="">{{listado.cod_falta}}</option>
+                                <option value="0">P</option>
+                                <option value="2">T</option>
+                                <option value="1">A</option>
+                </select>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+          <div style="margin-left:35%;" ng-show="listado.dataI == 200">
+            <button class="btn btn-primary" ng-click="goSave()" ng-confirm-click="Esta seguro que desea GUARDAR la asistencia para este curso? Una vez guardada solo podrá operar con dicho curso hasta que se realice la confirmación.">Guardar</button>
+            <button class="btn btn-primary" ng-click="goConfirm()" ng-confirm-click="Esta seguro que desea CONFIRMAR la asistencia para este curso?. Una vez CONFIRMADA no la podrá volver a editar.">Confirmar</button>
+            <button class="btn btn-danger" ng-click="goBack()" ng-confirm-click="Volvera al listado de Materias. Seguro?">Cancelar</button>
+          </div>
+          <div style="margin-left:35%;" ng-hide="listado.dataI == 200">
+            <button class="btn btn-danger" ng-click="goBack()">Regresar</button>
+          </div>
+      </div> 
+
+
+  <h5 style="margin-left:30%;" class="ava">&copy 2015 - Asistencia</h5>
