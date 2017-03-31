@@ -1,4 +1,4 @@
-<?php //test commit
+<?php //test commi
 header("Content-Type: application/json", true); 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
@@ -15,7 +15,7 @@ $database = "heroku_8636d613bba5fb8";
  
 $conn = new mysqli($server, $username, $password, $database);
 
-/* comprueba la conexión */
+/* comprueba la conexiÃ³n */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
